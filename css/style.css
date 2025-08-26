@@ -28,11 +28,16 @@ body{
   text-rendering:optimizeLegibility;
 }
 
-a{color:var(--ink); text-decoration:none}          /* no underline */
+a{color:var(--ink); text-decoration:none}
 img{max-width:100%; height:auto; display:block}
 
 /* Layout */
 .container{width:min(1120px, 92%); margin-inline:auto}
+@media (max-width: 650px) {
+  .nav-links {
+    display: none !important;
+  }
+}
 header.nav{
   position:sticky; top:0; background:rgba(255,255,255,.7); backdrop-filter:saturate(180%) blur(12px);
   z-index:20;
